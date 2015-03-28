@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{884A64A7-2852-415D-A4F3-79F989B2E992}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\nuget.exe = .nuget\nuget.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Web", "Test.Web\Test.Web.csproj", "{BB68FED3-84B9-4EB4-8043-DC5ADE700765}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeScript.MSBuild", "TypeScript.MSBuild", "{6FBD1A81-C348-4467-9F76-1EB8A7B12502}"
+	ProjectSection(SolutionItems) = preProject
+		Typescript.MSBuild\Readme.txt = Typescript.MSBuild\Readme.txt
+		Typescript.MSBuild\TypeScript.MSBuild.nuspec = Typescript.MSBuild\TypeScript.MSBuild.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{9DCD8298-B71C-4B76-A527-D585EE6C4100}"
+	ProjectSection(SolutionItems) = preProject
+		Typescript.MSBuild\tools\Install.ps1 = Typescript.MSBuild\tools\Install.ps1
+		Typescript.MSBuild\tools\Install.Tests.ps1 = Typescript.MSBuild\tools\Install.Tests.ps1
+		Typescript.MSBuild\tools\ProjectFileTransform.ps1 = Typescript.MSBuild\tools\ProjectFileTransform.ps1
+		Typescript.MSBuild\tools\Uninstall.ps1 = Typescript.MSBuild\tools\Uninstall.ps1
+		Typescript.MSBuild\tools\Uninstall.Tests.ps1 = Typescript.MSBuild\tools\Uninstall.Tests.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{3A43ACAA-D9EB-4FCE-AAD5-C9E4340B534B}"
+	ProjectSection(SolutionItems) = preProject
+		Typescript.MSBuild\content\TypeScript.MSBuild.readme.txt = Typescript.MSBuild\content\TypeScript.MSBuild.readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB68FED3-84B9-4EB4-8043-DC5ADE700765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB68FED3-84B9-4EB4-8043-DC5ADE700765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB68FED3-84B9-4EB4-8043-DC5ADE700765}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9DCD8298-B71C-4B76-A527-D585EE6C4100} = {6FBD1A81-C348-4467-9F76-1EB8A7B12502}
+		{3A43ACAA-D9EB-4FCE-AAD5-C9E4340B534B} = {6FBD1A81-C348-4467-9F76-1EB8A7B12502}
+	EndGlobalSection
+EndGlobal

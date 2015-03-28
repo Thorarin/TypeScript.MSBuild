@@ -1,0 +1,1 @@
+This file is here to make sure NuGet runs the package's install script; it can be safely deleted.

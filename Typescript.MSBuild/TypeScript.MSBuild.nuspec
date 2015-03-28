@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TypeScript.MSBuild</id>
+    <version>1.4.0-prerelease</version>
+    <authors>Marcel Veldhuizen</authors>
+    <owners>Marcel Veldhuizen</owners>
+    <iconUrl>http://thorarin.net/external/nuget/TypeScript.MSBuild.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Installs TypeScript 1.4 tools as a NuGet package and modifies the project file to use these tools. This ensures that compilation will work even on build agents that do not have these tools installed.
+You should install the TypeScript for Visual Studio extension on your development machine, and add at least one .ts file to the project prior to installing this package.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2015 Marcel Veldhuizen.</copyright>
+    <tags>TypeScript MSBuild</tags>
+  </metadata>
+  <files>
+    <file src="Readme.txt" target="" />
+    <file src="content\TypeScript.MSBuild.readme.txt" target="content" />
+    <file src="tools\Install.ps1" target="tools" />
+    <file src="tools\Uninstall.ps1" target="tools" />
+    <file src="tools\ProjectFileTransform.ps1" target="tools" />
+    <file src="tools\MSBuild\**" target="tools\MSBuild" />
+    <file src="tools\Microsoft SDKs\**" target="tools\Microsoft SDKs" />
+   </files>  
+</package>
