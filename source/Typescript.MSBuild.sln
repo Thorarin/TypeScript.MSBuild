@@ -20,10 +20,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{9DCD8298-B71C-4B76-A527-D585EE6C4100}"
 	ProjectSection(SolutionItems) = preProject
 		Typescript.MSBuild\tools\Install.ps1 = Typescript.MSBuild\tools\Install.ps1
-		Typescript.MSBuild\tools\Install.Tests.ps1 = Typescript.MSBuild\tools\Install.Tests.ps1
 		Typescript.MSBuild\tools\ProjectFileTransform.ps1 = Typescript.MSBuild\tools\ProjectFileTransform.ps1
+		Typescript.MSBuild\tools\ProjectFileTransform.Tests.ps1 = Typescript.MSBuild\tools\ProjectFileTransform.Tests.ps1
 		Typescript.MSBuild\tools\Uninstall.ps1 = Typescript.MSBuild\tools\Uninstall.ps1
-		Typescript.MSBuild\tools\Uninstall.Tests.ps1 = Typescript.MSBuild\tools\Uninstall.Tests.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{3A43ACAA-D9EB-4FCE-AAD5-C9E4340B534B}"

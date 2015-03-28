@@ -1,5 +1,5 @@
 Function Get-Paths {
-    param ($installPath, $toolsPath, $package)
+    param ($toolsPath)
     
     $packageDir = Split-Path -Path $toolsPath -Parent | Split-Path -Leaf
     $packagePath = "`$(ProjectDir)\..\packages\$packageDir"
@@ -17,7 +17,7 @@ Function Get-Paths {
 Function ModifyProjectFile {
     param ($installPath, $toolsPath, $package, $xml)
         
-    $paths = Get-Paths $installPath $toolsPath $package
+    $paths = Get-Paths $toolsPath
     $project = CreateProjectWrapper $xml
     
     $typeScriptVersion = $project.GetProperty('TypeScriptToolsVersion')
@@ -30,11 +30,11 @@ Function ModifyProjectFile {
 Function RestoreProjectFile {
     param ($installPath, $toolsPath, $package, $xml)
     
-    $paths = Get-Paths $installPath $toolsPath $package
+    $paths = Get-Paths $toolsPath
     $project = CreateProjectWrapper $xml
     
-    $a = $project.ReplaceImport($paths.Props, $paths.OriginalProps, $true)
-    $b = $project.ReplaceImport($paths.Targets, $paths.OriginalTargets, $true)
+    $project.ReplaceImport($paths.Props, $paths.OriginalProps, $true)
+    $project.ReplaceImport($paths.Targets, $paths.OriginalTargets, $true)
 }
 
 Function CreateProjectWrapper {
