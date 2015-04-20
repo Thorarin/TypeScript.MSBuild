@@ -13,3 +13,19 @@ $xml = [XML] (gc $project.FullName)
 if ($xml -eq $null) { exit }
 ModifyProjectFile $installPath $toolsPath $package $xml
 $xml.Save($project.FullName)
+
+# Replace tschost.dll according to IE version
+Function GetInternetExplorerVersion {
+    $version = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Internet Explorer').SvcVersion
+    if ($version -eq $null) {
+        $version = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Internet Explorer').Version
+    }
+    return $version
+}
+
+$ieVersion = GetInternetExplorerVersion
+$paths = Get-Paths $toolsPath
+
+if ($ieVersion.Major -le 9) {
+    Copy-Item "$($paths.Sdk)\tschost.ie9.dll" "$($paths.Sdk)\tschost.dll"
+}

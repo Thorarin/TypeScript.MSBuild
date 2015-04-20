@@ -11,6 +11,7 @@ Function Get-Paths {
         Targets = "$packagePath\tools\MSBuild\Microsoft\VisualStudio\v`$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets";
         OriginalProps = "$originalTypeScriptPath\Microsoft.TypeScript.Default.props";
         OriginalTargets = "$originalTypeScriptPath\Microsoft.TypeScript.targets";
+        Sdk = "$toolsPath\Microsoft SDKs\TypeScript\1.4";
     }
 }
 
