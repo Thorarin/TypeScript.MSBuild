@@ -12,6 +12,10 @@ Describe "Get-Paths" {
         $paths = Get-Paths "C:\packages\PackageDir.1.0.0\tools"
         $paths.Targets.Contains('\packages\PackageDir.1.0.0\') | Should Be $true
     }
+    It "gets SDK directory from tools path" {
+        $paths = Get-Paths "C:\packages\PackageDir.1.0.0\tools"
+        $paths.Sdk.Contains('\packages\PackageDir.1.0.0\tools\Microsoft SDKs\TypeScript\1.4') | Should Be $true
+    }
 }
 
 Describe "ModifyProjectFile" {
