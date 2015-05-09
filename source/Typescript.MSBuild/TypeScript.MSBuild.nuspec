@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>TypeScript.MSBuild</id>
-    <version>1.4.0-prerelease2</version>
+    <version>1.4.0-prerelease3</version>
     <authors>Marcel Veldhuizen</authors>
     <owners>Marcel Veldhuizen</owners>
     <projectUrl>https://github.com/Thorarin/TypeScript.MSBuild</projectUrl>

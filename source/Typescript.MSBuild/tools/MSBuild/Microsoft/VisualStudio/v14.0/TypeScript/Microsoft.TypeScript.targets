@@ -100,6 +100,14 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   </ItemGroup>
 
   <Target Name="PreComputeCompileTypeScript">
+    <!-- Detect Internet Explorer version and use correct tschost.dll accordingly -->
+    <PropertyGroup>
+        <InternetExplorer10Plus Condition="'$([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer`, `svcVersion`))' != ''">true</InternetExplorer10Plus>
+        <TscHostFile Condition="'$(InternetExplorer10Plus)' == 'true'">tschost.ie11.dll</TscHostFile>
+        <TscHostFile Condition="'$(InternetExplorer10Plus)' != 'true'">tschost.ie9.dll</TscHostFile>
+    </PropertyGroup>
+    <Move Condition="!Exists('$(TscToolPath)\tschost.dll')" SourceFiles="$(TscToolPath)\$(TscHostFile)" DestinationFiles="$(TscToolPath)\tschost.dll" />  
+  
     <VsTsc
       ToolPath="$(TscToolPath)"
       ToolExe="$(TscToolExe)"
